@@ -80,7 +80,7 @@ const SavedFunds = () => {
     if (!token) return;
 
     try {
-      const response = await fetch(`http://localhost:5000/api/funds/remove/${schemeCode}`, {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/funds/remove/${schemeCode}`, {
         method: 'DELETE',
         headers: { 'Authorization': `Bearer ${token}` },
       });
