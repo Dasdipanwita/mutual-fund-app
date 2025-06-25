@@ -36,7 +36,7 @@ const SavedFunds = () => {
     }
     setIsLoading(true);
     try {
-      const response = await fetch('http://localhost:5000/api/funds/saved', {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/funds/saved`, {
         headers: { 'Authorization': `Bearer ${token}` },
       });
       
