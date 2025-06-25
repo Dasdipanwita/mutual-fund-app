@@ -46,7 +46,7 @@ const FundDetail = () => {
       setIsLoading(true);
       setErrorInfo(null);
       try {
-        const response = await fetch(`http://localhost:5000/api/funds/details/${schemeCode}`);
+        const response = await fetch(`${import.meta.env.VITE_API_URL}/api/funds/details/${schemeCode}`);
         const data = await response.json();
 
         if (data && data.meta && data.meta.scheme_name) {
