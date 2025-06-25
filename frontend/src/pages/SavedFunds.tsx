@@ -36,7 +36,7 @@ const SavedFunds = () => {
     }
     setIsLoading(true);
     try {
-      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/funds/save`, {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/funds/saved`, {
         headers: { 'Authorization': `Bearer ${token}` },
       });
       
