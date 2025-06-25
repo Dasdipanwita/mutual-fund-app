@@ -25,7 +25,7 @@ const ExpertGuidance = () => {
 
     const fetchGuidance = async () => {
       try {
-        const response = await fetch('http://localhost:5000/api/guidance', {
+        const response = await fetch(`${import.meta.env.VITE_API_URL}/api/guidance`, {
           headers: { 'Authorization': `Bearer ${token}` },
         });
         if (!response.ok) throw new Error('Failed to fetch expert guidance.');
