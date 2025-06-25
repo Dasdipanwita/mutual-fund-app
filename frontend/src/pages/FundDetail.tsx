@@ -113,7 +113,7 @@ const FundDetail = () => {
 
     setIsSubmitting(true);
     try {
-      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/funds/save`, {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/funds/saved`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
