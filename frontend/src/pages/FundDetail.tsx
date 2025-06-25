@@ -76,7 +76,7 @@ const FundDetail = () => {
       const token = localStorage.getItem('token');
       if (!token || !schemeCode) return;
       try {
-        const response = await fetch(`http://localhost:5000/api/funds/saved`, {
+        const response = await fetch(`${import.meta.env.VITE_API_URL}/api/funds/saved`, {
           headers: { 'Authorization': `Bearer ${token}` }
         });
         if (!response.ok) return;
@@ -113,7 +113,7 @@ const FundDetail = () => {
 
     setIsSubmitting(true);
     try {
-      const response = await fetch(`http://localhost:5000/api/funds/save`, {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/funds/saved`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
